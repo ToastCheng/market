@@ -1,7 +1,6 @@
 import { Button, styled } from '@mui/material';
-import { theme } from './Theme';
 
-export const ActionButton = styled(Button)(({ theme }) => ({
+export default styled(Button)(({ theme }) => ({
   backgroundColor: theme.palette.otherColor,
   color: '#888',
   margin: 5,

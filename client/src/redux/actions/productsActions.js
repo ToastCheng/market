@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { ActionTypes } from '../constants/actionType';
+import ActionTypes from '../constants/actionType';
 
 const API = axios.create({ baseURL: 'http://localhost:5000' });
 
@@ -9,6 +9,11 @@ API.interceptors.request.use((req) => {
   }
   console.log(req.headers.Authorization);
   return req;
+});
+
+export const setPage = (page) => ({
+  type: ActionTypes.SET_PAGE,
+  payload: page,
 });
 
 export const setProducts = (product) => ({
@@ -33,4 +38,17 @@ export const createProduct = (product) => async (dispatch) => {
   }
 };
 
-// returns a product object
+export const fetchProducts = () => async (dispatch, getState) => {
+  const { page, limit } = getState().productsReducer.filters;
+  const response = await axios
+    .get('http://localhost:5000/api/products', { params: { page, limit } })
+    .catch((err) => {
+      console.log(err);
+    });
+  dispatch(setProducts(response.data.products));
+};
+
+export const setPageAndFetch = (page) => (dispatch) => {
+  dispatch(setPage(page));
+  dispatch(fetchProducts());
+};

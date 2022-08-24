@@ -4,7 +4,6 @@ import {
 } from '@mui/material';
 import RemoveIcon from '@mui/icons-material/Remove';
 import AddIcon from '@mui/icons-material/Add';
-import { theme } from '../themes/Theme';
 
 const StyledForm = styled(FormControl)(({ theme }) => ({
   margin: theme.spacing(1),

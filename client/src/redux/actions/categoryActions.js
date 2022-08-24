@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { ActionTypes } from '../constants/actionType';
+import ActionTypes from '../constants/actionType';
 
 const API = axios.create({ baseURL: 'http://localhost:5000' });
 

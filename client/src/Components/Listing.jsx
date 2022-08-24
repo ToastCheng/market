@@ -73,14 +73,14 @@ function Listing({
                   onChange={handleInputChange}
                 >
                   <MenuItem key="Apparel & Accessories" value="Apparel & Accessories">
-                      Apparel & Accessories
-                    </MenuItem>
+                    Apparel & Accessories
+                  </MenuItem>
                   <MenuItem key="Clothing" value="Clothing">
-                      clothing
-                    </MenuItem>
+                    clothing
+                  </MenuItem>
                   <MenuItem key="Furniture " value="Furniture">
-                      Furniture
-                    </MenuItem>
+                    Furniture
+                  </MenuItem>
 
                 </Select>
               </FormControl>
