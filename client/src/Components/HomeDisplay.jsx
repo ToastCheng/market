@@ -1,18 +1,18 @@
-import React, { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { setProducts } from "../redux/actions/productsActions";
-import Postsection from "./Postsection";
-import Sidebar from "./Sidebar/Sidebar";
-import axios from "axios";
-import { Box, Stack } from "@mui/material";
+import React, { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import axios from 'axios';
+import { Box, Stack } from '@mui/material';
+import { setProducts } from '../redux/actions/productsActions';
+import Postsection from './Postsection';
+import Sidebar from './Sidebar/Sidebar';
 
 function HomeDisplay() {
   const products = useSelector((state) => state.productsReducer.products);
-  console.log('products at homedisplay', products)
+  console.log('products at homedisplay', products);
   const dispatch = useDispatch();
   const fetchProducts = async () => {
     const response = await axios
-      .get("http://localhost:5000/api/products")
+      .get('http://localhost:5000/api/products')
       .catch((err) => {
         console.log(err);
       });
@@ -24,17 +24,16 @@ function HomeDisplay() {
     // })
   };
 
-  //console.log(products)
-  
+  // console.log(products)
+
   useEffect(() => {
     fetchProducts();
-   
   }, []);
 
-  const [selectedTab, setSelectedTab] = useState("sell");
+  const [selectedTab, setSelectedTab] = useState('sell');
   const handleTabChange = (event, selectedTab) => {
     setSelectedTab(selectedTab);
-    console.log("tabswitch click!");
+    console.log('tabswitch click!');
   };
 
   return (
