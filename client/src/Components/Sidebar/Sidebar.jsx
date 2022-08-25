@@ -1,15 +1,17 @@
-import React from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { setProducts } from "../../redux/actions/productsActions";
-import axios from "axios";
+import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import axios from 'axios';
 
-import { Box, Chip, Grid, Stack, Typography } from "@mui/material";
+import {
+  Box, Chip, Grid, Stack, Typography,
+} from '@mui/material';
+import { setProducts } from '../../redux/actions/productsActions';
 
 // http://localhost:5000/api/products?category=Furniture
 
-const Sidebar = () => {
-  const dispatch = useDispatch(); //return a function
-  //useDispatch -> put data in redux!
+function Sidebar() {
+  const dispatch = useDispatch(); // return a function
+  // useDispatch -> put data in redux!
   // const currentTab = useSelector(state => state.currentTab);
   return (
     <Stack
@@ -17,7 +19,7 @@ const Sidebar = () => {
       bgcolor="lightyellow"
       flex={0.25}
       padding={2}
-      sx={{ display: { xs: "none", sm: "block" } }} //when we in mobile view we dont display the sidebar
+      sx={{ display: { xs: 'none', sm: 'block' } }} // when we in mobile view we dont display the sidebar
     >
       {categories.map((category, i) => (
         <Grid item xs={12} key={i}>
@@ -59,21 +61,21 @@ const Sidebar = () => {
       ))}
     </Stack>
   );
-};
+}
 
 export default Sidebar;
 
 const categories = [
-  "All",
-  "Apparel & Accessories",
-  "Beauty & Personal Care ",
-  "Home & Kitchen",
-  "Furniture",
-  "Office Supplies",
-  "Toys & Games",
-  "Exercise & Fitness",
-  "Garden & Outdoor",
-  "Pets & Pets Supplies",
-  "Consumer Electronic Goods",
-  "Books",
+  'All',
+  'Apparel & Accessories',
+  'Beauty & Personal Care ',
+  'Home & Kitchen',
+  'Furniture',
+  'Office Supplies',
+  'Toys & Games',
+  'Exercise & Fitness',
+  'Garden & Outdoor',
+  'Pets & Pets Supplies',
+  'Consumer Electronic Goods',
+  'Books',
 ];

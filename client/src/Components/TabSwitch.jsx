@@ -1,13 +1,13 @@
-import React from "react";
-import handleTabChange, { setSelectedTab } from "./HomeDisplay";
+import React from 'react';
 
-import Tabs from "@mui/material/Tabs";
-import Tab from "@mui/material/Tab";
-import Box from "@mui/material/Box";
+import Tabs from '@mui/material/Tabs';
+import Tab from '@mui/material/Tab';
+import Box from '@mui/material/Box';
+import handleTabChange, { setSelectedTab } from './HomeDisplay';
 
 function TabSwitch({ selectedTab }) {
   return (
-    <Box sx={{ width: "100%", background: "white" }}>
+    <Box sx={{ width: '100%', background: 'white' }}>
       <Tabs
         value={selectedTab}
         onChange={handleTabChange}
