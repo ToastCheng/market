@@ -15,22 +15,20 @@ function ProductModal({ open, onClose, product }) {
 
   const style = {
     position: 'absolute',
-    top: '50%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
+    top: '20%',
+    left: '15%',
     width: '70%',
     height: '60%',
     bgcolor: 'background.paper',
     border: '2px solid #000',
     boxShadow: 24,
-    p: 4,
     borderRadius: 5,
-    padding: 10,
+    overflow: 'scroll',
   };
 
   return (
-    <Modal open={open} onClose={onClose}>
-      <Box sx={style}>
+    <Modal open={open} onClose={onClose} sx={style}>
+      <Box>
         <Grid lg={12} container spacing={2}>
           <Grid item lg={6} xs={12} sx={{ bgcolor: 'yellow' }}>
             <Imagediv>
@@ -61,8 +59,8 @@ function ProductModal({ open, onClose, product }) {
                   src={SelectedImg}
                   alt="selected"
                   style={{
-                    width: '250px',
-                    height: '400px',
+                    maxWidth: '250px',
+                    maxHeight: '400px',
                     margin: '20px',
                     borderRadius: '5px',
                     objectFit: 'cover',
@@ -105,9 +103,7 @@ function ProductModal({ open, onClose, product }) {
                   height: '5rem',
                   borderRadius: '50%',
                 }}
-                >
-                  <img>
-                </Box>
+                />
                 <ActionButtonDiv>
                   <Button sx={buttonstyle} component={Link} to="/message">
                     <Typography sx={{ fontFamily: 'Oswald' }}>
