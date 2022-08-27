@@ -23,7 +23,6 @@ function ProductModal({ open, onClose, product }) {
     border: '2px solid #000',
     boxShadow: 24,
     borderRadius: 5,
-    // padding: 10,
     overflow: 'scroll',
   };
 
