@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import Typography from '@mui/material/Typography';
 import {
-  Modal, Stack, Box, Button,
+  Modal, Stack, Box,
 } from '@mui/material';
 import styled from 'styled-components';
 
 import { Link } from 'react-router-dom';
 import { SAMPLEIMAGES } from '../constants/homepage';
+import { Button } from '../neumorphism/Button';
 
 function ProductModal({ open, onClose, product }) {
   const [SelectedImg, setSelectedImg] = useState(SAMPLEIMAGES[0]);

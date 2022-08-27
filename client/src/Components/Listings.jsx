@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import {
-  Box, Stack, Fab, Button, Typography,
+  Box, Stack, Fab, Typography,
 } from '@mui/material';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
@@ -8,6 +8,7 @@ import AddIcon from '@mui/icons-material/Add';
 import { createProduct } from '../redux/actions/productsActions';
 import { getCategories } from '../redux/actions/categoryActions';
 import Listing from './Listing';
+import { Button } from './neumorphism/Button';
 
 function Listings() {
   const categories = useSelector((state) => state.categoryReducer.categories);

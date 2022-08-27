@@ -1,11 +1,12 @@
 import React from 'react';
 import Typography from '@mui/material/Typography';
 import {
-  Modal, Stack, Box, Button,
+  Modal, Stack, Box,
 } from '@mui/material';
 import styled from 'styled-components';
 
 import { Link } from 'react-router-dom';
+import { Button } from '../neumorphism/Button';
 
 function ProductModal({ open, onClose, request }) {
   const style = {

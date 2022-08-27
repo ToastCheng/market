@@ -8,13 +8,13 @@ import ChatIcon from '@mui/icons-material/Forum';
 import {
   IconButton,
   Typography,
-  Button,
   styled,
   Toolbar,
   AppBar,
   Box,
 } from '@mui/material';
 import Login from './Login';
+import { Button } from './neumorphism/Button';
 
 // contains searchbar and Post Request button
 

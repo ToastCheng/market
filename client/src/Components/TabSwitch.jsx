@@ -2,8 +2,8 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
 import { setTab } from '../redux/actions/tabsActions';
+import { Button } from './neumorphism/Button';
 
 function TabSwitch() {
   // 0 = sell (products)
